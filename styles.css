@@ -1,0 +1,98 @@
+/* ===========================================================
+   styles.css
+   Hoja de estilos propia del proyecto "Moda Urbana"
+   Aquí van los estilos que NO vienen con Bootstrap, o que
+   sobrescriben algo de Bootstrap para personalizar el sitio.
+   =========================================================== */
+
+/* Variables de color: así solo cambiamos el color una vez
+   y se actualiza en todo el sitio. */
+:root {
+  --color-principal: #2c3e50;   /* azul oscuro */
+  --color-acento: #e67e22;      /* naranja */
+  --color-fondo-claro: #f8f9fa;
+}
+
+/* Un poco de aire al body y una tipografía general */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #333;
+}
+
+/* Barra de navegación con nuestro color principal */
+.navbar-personalizada {
+  background-color: var(--color-principal);
+}
+
+.navbar-personalizada .navbar-brand,
+.navbar-personalizada .nav-link {
+  color: #ffffff !important;
+}
+
+.navbar-personalizada .nav-link:hover {
+  color: var(--color-acento) !important;
+}
+
+/* Sección principal (hero) debajo del carrusel */
+.seccion-hero {
+  padding: 60px 0;
+  background-color: var(--color-fondo-claro);
+  text-align: center;
+}
+
+/* Tarjetas de producto: le damos una sombra suave y
+   un pequeño efecto al pasar el mouse */
+.tarjeta-producto {
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease-in-out;
+  margin-bottom: 25px;
+}
+
+.tarjeta-producto:hover {
+  transform: translateY(-5px);
+}
+
+.tarjeta-producto .precio {
+  color: var(--color-acento);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Botón personalizado, reutilizando el color de acento */
+.btn-acento {
+  background-color: var(--color-acento);
+  color: #ffffff;
+  border: none;
+}
+
+.btn-acento:hover {
+  background-color: #cf6a10;
+  color: #ffffff;
+}
+
+/* Pie de página */
+footer {
+  background-color: var(--color-principal);
+  color: #ffffff;
+  padding: 25px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+footer a {
+  color: var(--color-acento);
+  text-decoration: none;
+}
+
+/* Tabla de la página de catálogo y de contacto:
+   un poco más de espacio interno para que se vea más limpia */
+table.tabla-personalizada th,
+table.tabla-personalizada td {
+  vertical-align: middle;
+}
+
+/* Lista de valores en la página "Nosotros" */
+.lista-valores li {
+  margin-bottom: 8px;
+}
